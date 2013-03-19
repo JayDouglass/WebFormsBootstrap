@@ -122,6 +122,7 @@
     <Compile Include="Common\Validation\FormError.vb" />
     <Compile Include="Common\Validation\FormState.vb" />
     <Compile Include="Common\Validation\IntegerValidationRule.vb" />
+    <Compile Include="Common\Validation\LamdaValidationRule.vb" />
     <Compile Include="Common\Validation\LengthValidationRule.vb" />
     <Compile Include="Common\Validation\RequiredValidationRule.vb" />
     <Compile Include="Common\Validation\ValidationExtensions.vb" />

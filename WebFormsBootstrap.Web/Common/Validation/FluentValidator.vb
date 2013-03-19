@@ -26,6 +26,10 @@ Namespace Common.Validation
             End If
         End Sub
 
+        Public Sub ApplyRule(predicate As Func(Of Boolean), errorMessage As String)
+            ApplyRule(New LambdaValidationRule(Me, predicate, errorMessage))
+        End Sub
+
         Public Sub SetControlInvalid(errorMessage As String)
             FormState.Errors.Add(New FormError(errorMessage, Control))
             SetErrorStyle()
