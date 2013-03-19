@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "WebFormsBootstrap.Web", "WebFormsBootstrap.Web\WebFormsBootstrap.Web.vbproj", "{C29C3E22-A679-41C2-B9B5-C335058171BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4CAF114E-134B-4617-9151-F0296FC211CC}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C29C3E22-A679-41C2-B9B5-C335058171BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C29C3E22-A679-41C2-B9B5-C335058171BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C29C3E22-A679-41C2-B9B5-C335058171BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C29C3E22-A679-41C2-B9B5-C335058171BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
