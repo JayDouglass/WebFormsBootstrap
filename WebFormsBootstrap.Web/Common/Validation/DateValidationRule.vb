@@ -5,7 +5,7 @@
 
         Public Sub New(validator As FluentValidator, errorMessage As String)
             MyBase.New(validator)
-            Me.ErrorMessage = errorMessage
+            Me.ErrorMessage = If(errorMessage, "Enter a valid " & validator.ControlName)
         End Sub
 
         Public Overrides Function Validate() As Boolean

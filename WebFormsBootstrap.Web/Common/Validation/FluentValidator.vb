@@ -4,6 +4,7 @@ Namespace Common.Validation
     Public Class FluentValidator
         Property Control() As Control
         Property FormState() As FormState
+        Property ControlName() As String
 
         Dim _stopValidating As Boolean
         ReadOnly Property StopValidating() As Boolean
@@ -12,9 +13,10 @@ Namespace Common.Validation
             End Get
         End Property
 
-        Public Sub New(control As Control)
+        Public Sub New(control As Control, Optional controlName As String = Nothing)
             FormState = FormState.Current
             Me.Control = control
+            Me.ControlName = controlName
         End Sub
 
         Public Sub ApplyRule(rule As ValidationRule)

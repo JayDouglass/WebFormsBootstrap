@@ -3,18 +3,18 @@
 Namespace Common.Validation
     Public Module ValidationExtensions
         <Extension()>
-        Public Function Validate(control As Control) As FluentValidator
-            Return New FluentValidator(control)
+        Public Function Validate(control As Control, Optional controlName As String = Nothing) As FluentValidator
+            Return New FluentValidator(control, controlName)
         End Function
 
         <Extension()>
-        Public Function Required(validator As FluentValidator, message As String) As FluentValidator
+        Public Function Required(validator As FluentValidator, Optional message As String = Nothing) As FluentValidator
             validator.ApplyRule(New RequiredValidationRule(validator, message))
             Return validator
         End Function
 
         <Extension()>
-        Public Function IsDate(validator As FluentValidator, message As String) As FluentValidator
+        Public Function IsDate(validator As FluentValidator, Optional message As String = Nothing) As FluentValidator
             validator.ApplyRule(New DateValidationRule(validator, message))
             Return validator
         End Function
@@ -26,13 +26,13 @@ Namespace Common.Validation
         End Function
 
         <Extension()>
-        Public Function Length(validator As FluentValidator, name As String, max As Integer, Optional min As Integer = 0) As FluentValidator
-            validator.ApplyRule(New LengthValidationRule(validator, name, max, min))
+        Public Function Length(validator As FluentValidator, max As Integer, Optional min As Integer = 0) As FluentValidator
+            validator.ApplyRule(New LengthValidationRule(validator, max, min))
             Return validator
         End Function
 
         <Extension()>
-        Public Function IsInteger(validator As FluentValidator, message As String) As FluentValidator
+        Public Function IsInteger(validator As FluentValidator, Optional message As String = Nothing) As FluentValidator
             validator.ApplyRule(New IntegerValidationRule(validator, message))
             Return validator
         End Function

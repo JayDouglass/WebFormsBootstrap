@@ -3,9 +3,9 @@
         Inherits ValidationRule
         Property ErrorMessage() As String
 
-        Public Sub New(validator As FluentValidator, errorMessage As String)
+        Public Sub New(validator As FluentValidator, Optional errorMessage As String = Nothing)
             MyBase.New(validator)
-            Me.ErrorMessage = errorMessage
+            Me.ErrorMessage = If(errorMessage, "Enter the " & validator.ControlName)
         End Sub
 
         Public Overrides Function Validate() As Boolean
