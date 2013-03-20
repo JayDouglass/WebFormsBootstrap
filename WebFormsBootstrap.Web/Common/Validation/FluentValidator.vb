@@ -34,19 +34,6 @@ Namespace Common.Validation
 
         Public Sub SetControlInvalid(errorMessage As String)
             FormState.Errors.Add(New FormError(errorMessage, Control))
-            SetErrorStyle()
-        End Sub
-
-        Sub SetErrorStyle()
-            Dim controlGroup As Control = Control.Parent
-            ' traverse up control tree looking for the first ControlGroup
-            Do While controlGroup IsNot Nothing AndAlso Not TypeOf controlGroup Is ControlGroup
-                controlGroup = controlGroup.Parent
-            Loop
-
-            If controlGroup IsNot Nothing AndAlso TypeOf controlGroup Is ControlGroup Then
-                DirectCast(controlGroup, ControlGroup).ValidationStatus = ValidationState.Error
-            End If
         End Sub
     End Class
 End Namespace

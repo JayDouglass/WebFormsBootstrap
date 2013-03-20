@@ -116,6 +116,7 @@
     <Compile Include="Common\BasePage.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Common\Validation\BootstrapInvalidControlGroupStyler.vb" />
     <Compile Include="Common\Validation\DateValidationRule.vb" />
     <Compile Include="Common\Validation\DecimalValidationRule.vb" />
     <Compile Include="Common\Validation\FluentValidator.vb" />

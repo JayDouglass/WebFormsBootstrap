@@ -8,10 +8,7 @@ Public Class ValidationExample
     End Sub
 
     Protected Sub btnValidate_Click()
-        txtAge.Validate("Age") _
-            .Required() _
-            .IsInteger() _
-            .ApplyRule(AddressOf IsNotOld, "Too old")
+        txtAge.Validate("Age").Required().IsInteger().ApplyRule(AddressOf IsNotOld, "Too old")
         txtFirstName.Validate("First name").Required().Length(7)
         txtLastName.Validate("Last name").Required().Length(5)
         txtStartDate.Validate("Start date").Required().IsDate()
@@ -25,6 +22,7 @@ Public Class ValidationExample
 
     Private Sub Page_PreRender(sender As Object, e As EventArgs) Handles Me.PreRender
         If Not FormState.IsValid Then
+            BootstrapInvalidControlGroupStyler.StyleInvalidControls(FormState)
             divErrorMessages.Visible = True
             rpErrorMessages.DataSource = FormState.Errors
             rpErrorMessages.DataBind()

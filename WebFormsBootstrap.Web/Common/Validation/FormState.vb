@@ -18,8 +18,10 @@
                 Return Errors.Count = 0
             End Get
         End Property
+
         Public Sub New()
             Errors = New List(Of FormError)()
         End Sub
+
     End Class
 End NameSpace
