@@ -113,6 +113,42 @@ Partial Public Class ValidationExample
     Protected WithEvents txtEndDate As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''cgTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cgTitle As Global.WebFormsBootstrap.Web.Controls.Bootstrap.ControlGroup
+
+    '''<summary>
+    '''txtTitle control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents txtTitle As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''cgRequired control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cgRequired As Global.WebFormsBootstrap.Web.Controls.Bootstrap.ControlGroup
+
+    '''<summary>
+    '''chkTitleRequired control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents chkTitleRequired As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''btnValidate control.
     '''</summary>
     '''<remarks>

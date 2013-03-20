@@ -5,13 +5,7 @@ Namespace Common.Validation
         Property Control() As Control
         Property FormState() As FormState
         Property ControlName() As String
-
-        Dim _stopValidating As Boolean
-        ReadOnly Property StopValidating() As Boolean
-            Get
-                Return _stopValidating
-            End Get
-        End Property
+        Property StopValidating() As Boolean
 
         Public Sub New(control As Control, Optional controlName As String = Nothing)
             FormState = FormState.Current
@@ -23,7 +17,7 @@ Namespace Common.Validation
             If Not StopValidating Then
                 Dim result = rule.Validate()
                 If result = False Then
-                    _stopValidating = True ' stop validating on first error
+                    StopValidating = True ' stop validating on first error
                 End If
             End If
         End Sub

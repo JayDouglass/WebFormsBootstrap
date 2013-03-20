@@ -42,6 +42,12 @@
                                 <label>to</label>
                                 <asp:TextBox ID="txtEndDate" CssClass="span2" placeholder="mm/dd/yy" runat="server"></asp:TextBox>
                             </bootstrap:ControlGroup>
+                            <bootstrap:ControlGroup ID="cgTitle" Label="Title" runat="server">
+                                <asp:TextBox ID="txtTitle" CssClass="span2" runat="server"></asp:TextBox>                                
+                            </bootstrap:ControlGroup>
+                            <bootstrap:ControlGroup ID="cgRequired" Label="Title Required" runat="server">
+                                <asp:CheckBox ID="chkTitleRequired" runat="server" />
+                            </bootstrap:ControlGroup>
                         </fieldset>
                         <div class="form-actions">
                             <button id="btnValidate" runat="server" class="btn btn-primary" onserverclick="btnValidate_Click"><i class="icon-search"></i> Validate</button>

@@ -8,6 +8,30 @@ Namespace Common.Validation
         End Function
 
         <Extension()>
+        Public Function [When](validator As FluentValidator, test As Boolean) As FluentValidator
+            If Not test Then
+                validator.StopValidating = True
+            End If
+            Return validator
+        End Function
+
+        <Extension()>
+        Public Function [When](validator As FluentValidator, predicate As Func(Of Boolean)) As FluentValidator
+            If Not predicate() Then
+                validator.StopValidating = True
+            End If
+            Return validator
+        End Function
+
+        <Extension()>
+        Public Function WhenControlIsValid(validator As FluentValidator, control As Control) As FluentValidator
+            If FormState.Current.Errors.Any(Function(e) ReferenceEquals(e.Control, control)) Then
+                validator.StopValidating = True
+            End If
+            Return validator
+        End Function
+
+        <Extension()>
         Public Function Required(validator As FluentValidator, Optional message As String = Nothing) As FluentValidator
             validator.ApplyRule(New RequiredValidationRule(validator, message))
             Return validator

@@ -9,6 +9,7 @@
         End Sub
 
         Public Overrides Function Validate() As Boolean
+            If String.IsNullOrEmpty(GetControlValue()) Then Return True
             Dim value As Integer
             If Not Integer.TryParse(GetControlValue(), value) Then
                 validator.SetControlInvalid(ErrorMessage)
