@@ -23,7 +23,7 @@ Public Class ValidationExample
 
     Private Sub Page_PreRender(sender As Object, e As EventArgs) Handles Me.PreRender
         If Not FormState.IsValid Then
-            BootstrapInvalidControlGroupStyler.StyleInvalidControls(FormState)
+            BootstrapInvalidControlGroupStyler.StyleInvalidControls(FormState.Errors)
             divErrorMessages.Visible = True
             rpErrorMessages.DataSource = FormState.Errors
             rpErrorMessages.DataBind()
