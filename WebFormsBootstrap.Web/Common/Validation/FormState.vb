@@ -19,6 +19,10 @@
             End Get
         End Property
 
+        Public Sub AddError(errorMessage As String, control As Control)
+            Errors.Add(New FormError(errorMessage, control))
+        End Sub
+
         Public Sub New()
             Errors = New List(Of FormError)()
         End Sub
