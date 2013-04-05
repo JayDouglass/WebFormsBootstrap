@@ -60,5 +60,11 @@ Namespace Common.Validation
             validator.ApplyRule(New IntegerValidationRule(validator, message))
             Return validator
         End Function
+
+        <Extension()>
+        Public Function IsPhone(validator As FluentValidator, Optional message As String = Nothing) As FluentValidator
+            validator.ApplyRule(New PhoneValidationRule(validator, message))
+            Return validator
+        End Function
     End Module
 End Namespace
