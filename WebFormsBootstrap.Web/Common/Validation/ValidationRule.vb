@@ -11,6 +11,7 @@
         Protected Function GetControlValue() As String
             If TypeOf control Is WebControls.TextBox Then Return DirectCast(control, WebControls.TextBox).Text
             If TypeOf control Is DropDownList Then Return DirectCast(control, DropDownList).SelectedValue
+            If TypeOf control Is RadioButtonList Then Return DirectCast(control, RadioButtonList).SelectedValue
 
             Throw New InvalidOperationException("Unhandled control type")
         End Function
