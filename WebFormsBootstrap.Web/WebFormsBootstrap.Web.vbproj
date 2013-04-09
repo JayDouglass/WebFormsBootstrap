@@ -69,6 +69,7 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -108,14 +109,18 @@
     <Content Include="resources\bootstrap\img\glyphicons-halflings-white.png" />
     <Content Include="resources\bootstrap\img\glyphicons-halflings.png" />
     <Content Include="resources\bootstrap\js\bootstrap.js" />
+    <Content Include="TempDataExample.aspx" />
     <Content Include="ValidationExample.aspx" />
     <Content Include="Web.config" />
+    <Content Include="Global.asax" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\CassetteBundleConfiguration.vb" />
     <Compile Include="Common\BasePage.vb">
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Common\NullController.vb" />
+    <Compile Include="Common\TempData.vb" />
     <Compile Include="Common\Validation\BootstrapInvalidControlGroupStyler.vb" />
     <Compile Include="Common\Validation\DateValidationRule.vb" />
     <Compile Include="Common\Validation\DecimalValidationRule.vb" />
@@ -125,6 +130,7 @@
     <Compile Include="Common\Validation\IntegerValidationRule.vb" />
     <Compile Include="Common\Validation\LambdaValidationRule.vb" />
     <Compile Include="Common\Validation\LengthValidationRule.vb" />
+    <Compile Include="Common\Validation\PhoneValidationRule.vb" />
     <Compile Include="Common\Validation\RequiredValidationRule.vb" />
     <Compile Include="Common\Validation\ValidationExtensions.vb" />
     <Compile Include="Common\Validation\ValidationRule.vb" />
@@ -149,12 +155,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="TempDataExample.aspx.designer.vb">
+      <DependentUpon>TempDataExample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TempDataExample.aspx.vb">
+      <DependentUpon>TempDataExample.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ValidationExample.aspx.designer.vb">
       <DependentUpon>ValidationExample.aspx</DependentUpon>
     </Compile>
     <Compile Include="ValidationExample.aspx.vb">
       <DependentUpon>ValidationExample.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
