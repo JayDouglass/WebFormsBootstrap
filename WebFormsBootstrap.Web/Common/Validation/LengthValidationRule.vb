@@ -13,7 +13,7 @@
 
         Public Overrides Function Validate() As Boolean
             Dim value = GetControlValue()
-            If value.Length < 0 Then
+            If value.Length < Min Then
                 validator.SetControlInvalid(String.Format("{0} must be at least {1} characters", validator.ControlName, Min.ToString()))
                 Return False
             End If
